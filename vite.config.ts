@@ -5,9 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    //assetsDir: "images", //생성된 자산을 중첩할 디렉토리를 지정하십시오
     rollupOptions: { //기본 롤업 번들을 직접 사용자 설정합니다.
-      input: { app: "./skin.html" }, // 어떤 파일부터 불러올지 정함. 
+      input: { app: "index.html" }, // 어떤 파일부터 불러올지 정함. 
       output: { //최종 아웃풋 설정
         format: "esm", // iife, cjs, esm
         entryFileNames: `[name].js`,
