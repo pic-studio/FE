@@ -1,9 +1,13 @@
+import React, {Suspense} from 'react'
+import Router from './Router';
 import "./assets/font/index.css"
 
 function App() {
   return (
     <div>
-      Hi~
+      <Suspense>
+        <Router/>
+      </Suspense>
     </div>
   )
 }
