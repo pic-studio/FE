@@ -1,19 +1,19 @@
-import { useState, Dispatch, SetStateAction } from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import Button from "../elements/Button";
 import Input from "../elements/Input";
 
 interface TestProps {
 	hide: boolean;
-	setValue: Dispatch<SetStateAction<boolean>>
 }
 
 const Component = () => {
 	const [value, setValue] = useState<TestProps>({hide: false});
 
-	const setInput = (e) => {
+	const setInput = (e: React.ChangeEvent<HTMLInputElement>):void => {
+		e.preventDefault();
 		setValue({hide: true});
-	}
+	};
 
 	return (
 		<>
@@ -27,7 +27,7 @@ const Component = () => {
 			<SerchBx hide={value.hide}>
 				<i className="ic-search serch_icon"></i>
 				<i className="ic-close_mark search_close"></i>
-				<Input bgColor="#EFEFEF" borderRadius="1.6rem" padding="0 10px 0 50px" onChange={setInput}/>
+				<Input bgColor="#EFEFEF" borderRadius="1.6rem" padding="0 10px 0 50px" onChange={setInput} />
 			</SerchBx>
 		</>
 	)

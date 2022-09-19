@@ -12,10 +12,10 @@ interface InputProps{
   padding?:       string;
   children?:      string;
   placeholder?:   string;
-  onChange?:      void; 
+  onChange?:      (e : React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input = ({width, height, color, border, borderRadius, bgColor, fontSize, fontWeight, padding, children, placeholder="텍스트를 입력해주세요.", onChange}: InputProps) => {
+const Input = ({width, height, color, border, borderRadius, bgColor, fontSize, fontWeight, padding, children, onChange, placeholder="텍스트를 입력해주세요.",}: InputProps) => {
   const styles = {width, height, color, border, borderRadius, bgColor, fontSize, fontWeight, padding}
   return (
     <InputBx {...styles} className="inputBx" defaultValue={children} placeholder={placeholder} onChange={onChange}/>
