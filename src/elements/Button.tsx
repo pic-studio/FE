@@ -23,12 +23,12 @@ const Button = ({width, height, lineHeight, color, border, borderRadius, bgColor
 
  Button.defaultProps = {
   width:        "108px",
-	height:       "44px",
+  height:       "44px",
   lineHeight:   "inherit",
-	color :       "#fff",
+  color :       "#fff",
   border:       "1px solid #eee",
-	borderRadius: "1.6rem",
-	bgColor:      "#4B83F2"
+  borderRadius: "1.6rem",
+  bgColor:      "#4B83F2"
  }
 
 const BtnBx = styled.button<ButtonProps>`
