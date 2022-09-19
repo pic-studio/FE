@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react'
+import {Suspense} from 'react'
 import Router from './Router';
 import "./assets/font/index.css"
 
