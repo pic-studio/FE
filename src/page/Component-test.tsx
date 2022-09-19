@@ -14,7 +14,7 @@ const Component = () => {
 		e.preventDefault();
 		setValue({hide: true});
 	};
-
+	
 	return (
 		<>
 			<Button color="#fff" children="회원가입"/>
@@ -24,16 +24,16 @@ const Component = () => {
 			<Button width="188px" color="#ED5A49" bgColor="#FDF1F0" borderRadius="6px" children="YES"/>
 			<Button width="405px" color="#fff" borderRadius="6px" boxShadow="0px 4px 12px rgba(0, 79, 255, 0.4)" children="로그인"/>
 			<Input />
-			<SerchBx hide={value.hide}>
+			<SerchBox hide={value.hide}>
 				<i className="ic-search serch_icon"></i>
 				<i className="ic-close_mark search_close"></i>
 				<Input bgColor="#EFEFEF" borderRadius="1.6rem" padding="0 10px 0 50px" onChange={setInput} />
-			</SerchBx>
+			</SerchBox>
 		</>
 	)
 }
 
-const SerchBx = styled.div<TestProps>`
+const SerchBox = styled.div<TestProps>`
  ${({hide}) => {
 	return css`
 		position: relative;

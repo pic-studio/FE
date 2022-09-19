@@ -18,7 +18,7 @@ interface ButtonProps {
 const Button = ({width, height, lineHeight, color, border, borderRadius, bgColor, boxShadow, fontSize, fontWeight, padding, children="버튼"} :ButtonProps) => {
   const styles = {width, height, lineHeight, color, border, borderRadius, bgColor, boxShadow, fontSize, fontWeight, padding, children};
   return (
-    <BtnBx {...styles} className="btnBx">{children}</BtnBx>
+    <BtnBox {...styles} className="btnBx">{children}</BtnBox>
   )
 };
 
@@ -33,7 +33,7 @@ const Button = ({width, height, lineHeight, color, border, borderRadius, bgColor
   boxShadow:    "0px 4px 12px transparent",
  }
 
-const BtnBx = styled.button<ButtonProps>`
+const BtnBox = styled.button<ButtonProps>`
   width:            ${props => props.width};
   height:           ${props => props.height};
   line-height:      ${props => props.lineHeight};
