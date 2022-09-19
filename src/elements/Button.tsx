@@ -7,15 +7,16 @@ interface ButtonProps {
   color?:         string;
   border?:        string;
   borderRadius?:  string;
+  bgColor?:       string;
+  boxShadow?:     string;
   fontSize?:      string;
   fontWeight?:    string;
   padding?:       string;
-  bgColor?:       string;
   children?:      string;
 }
 
-const Button = ({width, height, lineHeight, color, border, borderRadius, bgColor, fontSize, fontWeight, padding, children="버튼"} :ButtonProps) => {
-  const styles = {width, height, lineHeight, color, border, borderRadius, bgColor, fontSize, fontWeight, padding, children};
+const Button = ({width, height, lineHeight, color, border, borderRadius, bgColor, boxShadow, fontSize, fontWeight, padding, children="버튼"} :ButtonProps) => {
+  const styles = {width, height, lineHeight, color, border, borderRadius, bgColor, boxShadow, fontSize, fontWeight, padding, children};
   return (
     <BtnBx {...styles} className="btnBx">{children}</BtnBx>
   )
@@ -26,9 +27,10 @@ const Button = ({width, height, lineHeight, color, border, borderRadius, bgColor
   height:       "44px",
   lineHeight:   "inherit",
   color :       "#fff",
-  border:       "1px solid #eee",
+  border:       "1px solid transparent",
   borderRadius: "1.6rem",
-  bgColor:      "#4B83F2"
+  bgColor:      "#4B83F2",
+  boxShadow:    "0px 4px 12px transparent",
  }
 
 const BtnBx = styled.button<ButtonProps>`
@@ -39,6 +41,7 @@ const BtnBx = styled.button<ButtonProps>`
   border:           ${props => props.border};
   border-radius:    ${props => props.borderRadius};
   background-color: ${props => props.bgColor};
+  box-shadow:       ${props => props.boxShadow};
   font-size:        ${props => props.fontSize};
   font-weight:      ${props => props.fontWeight};
   padding:          ${props => props.padding};

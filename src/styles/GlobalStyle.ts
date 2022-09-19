@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
   button, 
   input,
   textarea {
+    font-size: 16px;
     color: ${({ theme }) => theme.colors.black};
     background-color: transparent;
     border: none;
