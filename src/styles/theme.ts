@@ -1,7 +1,7 @@
 import { DefaultTheme } from 'styled-components';
 
 const theme : DefaultTheme = {
-  fontSizes : {
+  fontSizes: {
     font10: "10px",
     font12: "12px",
     font13: "13px",
@@ -32,7 +32,8 @@ const theme : DefaultTheme = {
     fontColor02: "#B1B8C0",
     fontColor01: "#d1d6da",
     pointBlue01: "#D6EAF4",
-  }
+  },
+  width: ''
 }
 
 export default theme;
