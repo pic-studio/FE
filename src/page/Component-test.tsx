@@ -4,15 +4,25 @@ import Button from "../elements/Button";
 import Input from "../elements/Input";
 
 interface TestProps {
-	hide: boolean;
+	isHide: {hide: boolean;}
+	dece: {txt: string;}
+	onClick: (e : React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Component = () => {
-	const [value, setValue] = useState<TestProps>({hide: false});
+	const [value, setValue] = useState<TestProps['isHide']>({hide: false});
+	const [txt, setTxt] = useState<TestProps['dece']>({txt: ''})
 
 	const setInput = (e: React.ChangeEvent<HTMLInputElement>):void => {
 		e.preventDefault();
-		setValue({hide: true});
+		setTxt({txt: e.currentTarget.value})
+		!e.currentTarget.value ? setValue({hide: false}) : setValue({hide: true})
+	};
+
+	const clean = (e: React.MouseEvent<HTMLInputElement>):void => {
+		e.preventDefault();
+		setTxt({txt: ''})
+		setValue({hide: false})
 	};
 	
 	return (
@@ -26,14 +36,14 @@ const Component = () => {
 			<Input />
 			<SerchBox hide={value.hide}>
 				<i className="ic-search serch_icon"></i>
-				<i className="ic-close_mark search_close"></i>
-				<Input bgColor="#EFEFEF" borderRadius="1.6rem" padding="0 10px 0 50px" onChange={setInput} />
+				<i className="ic-close_mark search_close" onClick={clean}></i>
+				<Input bgColor="#EFEFEF" borderRadius="1.6rem" padding="0 60px 0 50px" children={txt.txt} onChange={setInput}/>
 			</SerchBox>
 		</>
 	)
 }
 
-const SerchBox = styled.div<TestProps>`
+const SerchBox = styled.div<TestProps['isHide']>`
  ${({hide}) => {
 	return css`
 		position: relative;

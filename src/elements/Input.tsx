@@ -18,7 +18,7 @@ interface InputProps{
 const Input = ({width, height, color, border, borderRadius, bgColor, fontSize, fontWeight, padding, children, placeholder="텍스트를 입력해주세요.", onChange}: InputProps) => {
   const styles = {width, height, color, border, borderRadius, bgColor, fontSize, fontWeight, padding}
   return (
-    <InputBox {...styles} className="inputBx" defaultValue={children} placeholder={placeholder} onChange={onChange}/>
+    <InputBox {...styles} className="inputBx" value={children} placeholder={placeholder} onChange={onChange}/>
   )
 }
 
