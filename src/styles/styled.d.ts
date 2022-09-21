@@ -6,34 +6,32 @@ declare module 'styled-components' {
     fontSizes : {
 			font10: string;
 			font12: string;
-			font13: string,
-			font14: string,
-			font16: string,
-			font18: string,
-			font20: string,
-			font22: string,
-			font24: string,
-			font28: string,
-			font34: string,
-			font50: string,
+			font13: string;
+			font14: string;
+			font16: string;
+			font18: string;
+			font20: string;
+			font22: string;
+			font24: string;
+			font28: string;
+			font34: string;
+			font50: string;
 		}
 
 		fontWeight: {
-			extraBold: number;
-			semiBold: number;
-			regular: number
+			extraBold:	number;
+			semiBold:		number;
+			regular: 		number;
 		}
 
 		colors: {
-			black: string,
-			white: string,
-			kakao: string,
-			error: string,
-			gray00: string,
-			fontColor03: string,
-			fontColor02: string,
-			fontColor01: string,
-			pointBlue01: string,
+			black: 			string;
+			white: 			string;
+			kakao: 			string;
+			blue: 			string;
+			blueLight: 	string;
+			red: 				string;
+			redLight: 	string;
 		}
   }
 }
