@@ -4,11 +4,9 @@ import "./assets/font/index.css"
 
 function App() {
   return (
-    <div>
-      <Suspense>
-        <Router/>
-      </Suspense>
-    </div>
+    <Suspense>
+      <Router/>
+    </Suspense>
   )
 }
 
