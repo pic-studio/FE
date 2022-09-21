@@ -1,6 +1,11 @@
+import Hearder from "../components/Hearder";
+
 const Home = () => {
   return(
-    <div>Home</div>
+    <>
+      <Hearder></Hearder>
+      <main>Home</main>
+    </>
   )
 }
 

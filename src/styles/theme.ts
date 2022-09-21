@@ -17,23 +17,20 @@ const theme : DefaultTheme = {
   },
 
   fontWeight: {
-    extraBold: 800,
-    semiBold: 600,
-    regular: 400,
+    extraBold:  800,
+    semiBold:   600,
+    regular:    400,
   },
 
   colors: {
-    black: "#000000",
-    white: "#ffffff",
-    kakao: "#FEEB00",
-    error: "#F95D5D",
-    gray00: "#fafbfb",
-    fontColor03: "#9198a0",
-    fontColor02: "#B1B8C0",
-    fontColor01: "#d1d6da",
-    pointBlue01: "#D6EAF4",
+    black:      "#000000",
+    white:      "#ffffff",
+    kakao:      "#FEEB00",
+    blue:       "#4B83F2",
+    blueLight:  "#4B83F2",
+    red:        "#ED5A49",
+    redLight:   "#FDF1F0",
   },
-  width: ''
 }
 
 export default theme;
