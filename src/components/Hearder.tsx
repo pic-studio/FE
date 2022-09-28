@@ -15,7 +15,7 @@ const initState = {
 	serchTxt: 	''
 }
 
-const Hearder = () => {
+const HearderComponents = () => {
 	const [value, setValue] = useState<HearderProps['serchInit']>(initState);
 	
 	const setInput = (e: React.ChangeEvent<HTMLInputElement>):void => {
@@ -106,4 +106,4 @@ const SerchBox = styled.div<HearderProps['serchInit']>`
 	
 `;
 
-export default Hearder;
+export default HearderComponents;
