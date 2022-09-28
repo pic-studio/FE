@@ -1,10 +1,13 @@
-import Hearder from "../components/Hearder";
+
+import FooterComponents from "../components/Footer";
+import HearderComponents from "../components/Hearder";
 
 const Home = () => {
   return(
     <>
-      <Hearder></Hearder>
+      <HearderComponents />
       <main>Home</main>
+      <FooterComponents />
     </>
   )
 }
