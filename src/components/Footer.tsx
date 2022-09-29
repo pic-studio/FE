@@ -1,31 +1,59 @@
+import { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import SpeechBubble from "./SpeechBubble";
 
+interface FooterComponentsProps {
+  name: string,
+  githubLink: string,
+  blogLink: string
+}
+
+const initState = {
+  teamInfo: [
+    {
+      name: "YounHoSo",
+      githubLink: "https://github.com/younhoso/",
+      blogLink: "https://triplexlab.tistory.com/"
+    },
+    {
+      name: "YounHoSo",
+      githubLink: "https://github.com/younhoso/",
+      blogLink: "https://triplexlab.tistory.com/"
+    },
+    {
+      name: "YounHoSo",
+      githubLink: "https://github.com/younhoso/",
+      blogLink: "https://triplexlab.tistory.com/"
+    },
+    {
+      name: "YounHoSo",
+      githubLink: "https://github.com/younhoso/",
+      blogLink: "https://triplexlab.tistory.com/"
+    }
+  ]
+}
+
 const FooterComponents = () => {
+  const [value, setValue] = useState<FooterComponentsProps[]>([]);
+
+  useEffect(() => {
+    setValue(initState['teamInfo'])
+  },[])
 
   return (
     <Footer>
       <div className="footer_inner">
         <h2>Pick Studio</h2>
-
         <div className="emoji_inner">
           <ul className="item_inner">
-            <li className="item">
-              <SpeechBubble githubLink={"https://github.com/younhoso/"} blogLink={"https://triplexlab.tistory.com/"} children={"FrontEnd"} />
-              <img src="/src/assets/img/younhosoEmoji.svg" alt="emoji" />
-            </li>
-            <li className="item">
-              <SpeechBubble githubLink={"https://github.com/younhoso/"} blogLink={"https://triplexlab.tistory.com/"} children={"FrontEnd"}/>
-              <img src="/src/assets/img/younhosoEmoji.svg" alt="emoji" />
-            </li>
-            <li className="item">
-              <SpeechBubble githubLink={"https://github.com/younhoso/"} blogLink={"https://triplexlab.tistory.com/"} children={"FrontEnd"}/>
-              <img src="/src/assets/img/younhosoEmoji.svg" alt="emoji" />
-            </li>
-            <li className="item">
-              <SpeechBubble githubLink={"https://github.com/younhoso/"} blogLink={"https://triplexlab.tistory.com/"} children={"FrontEnd"}/>
-              <img src="/src/assets/img/younhosoEmoji.svg" alt="emoji" />
-            </li>
+            {
+              value.map((item, idx) => (
+                <li className="item" key={idx}>
+                  <SpeechBubble githubLink={item.githubLink} blogLink={item.blogLink} children={"FrontEnd"} />
+                  <img src="/src/assets/img/younhosoEmoji.svg" alt="emoji" />
+                </li>
+              ))
+            }
           </ul>
         </div>
       </div>
