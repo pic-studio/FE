@@ -5,11 +5,12 @@ import App from './App';
 import GlobalStyles from './styles/GlobalStyle';
 import theme from './styles/theme';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+root.render(
   <ThemeProvider theme={theme}>
     <BrowserRouter>
       <GlobalStyles />
       <App />
     </BrowserRouter>
   </ThemeProvider>
-)
+);
