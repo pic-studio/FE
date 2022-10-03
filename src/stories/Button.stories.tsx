@@ -8,17 +8,15 @@ export default {
   title: 'Example/Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {  
+  argTypes: {
     backgroundColor: { control: 'color' },
     size: {
-      table: {
-        category: 'Sizes'
-      },
+      table: { category: 'Sizes'},
     },
+    
     onClick: {
       table: {
-        category: 'Events',
-        subcategory: 'Button Events',
+        category: 'Events'
       },
     },
   },
@@ -30,28 +28,22 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  label: 'Button',
-  size: 'small',
-  primary: false
-};
-
 export const Small = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
 Small.args = {
   label: 'Button',
-  size: 'small',
+  radius: 'none',
+  size: 'sm',
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
   label: 'Button',
-  size: 'medium',
+  size: 'md',
 };
 
 export const Large = Template.bind({});
 Large.args = {
   label: 'Button',
-  size: 'large',
+  size: 'lg',
 };
